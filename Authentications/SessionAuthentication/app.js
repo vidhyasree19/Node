@@ -6,7 +6,7 @@ const UserModel = require('./models/User');
 const MongoDBSession = require('connect-mongodb-session')(session);
 const bcrypt = require('bcrypt');
  
-const port = 7000;
+const port = 4000;
 const mongoURI = "mongodb://localhost:27017/Session_Auth";
  
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
