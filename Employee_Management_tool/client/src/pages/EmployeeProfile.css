@@ -1,0 +1,51 @@
+
+
+.EmployeeProfile {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .EmployeeProfile h2 {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .EmployeeProfile p {
+    margin-bottom: 10px;
+  }
+  
+  .EmployeeProfile p span {
+    font-weight: bold;
+    color: #337ab7;
+  }
+  
+  .EmployeeProfile p span::before {
+    content: ": ";
+  }
+  
+
+  .EmployeeProfile.profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .EmployeeProfile.profile-info p {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .EmployeeProfile.profile-info p:nth-child(2n+1) {
+    padding-right: 20px;
+  }
+  
+  .EmployeeProfile.profile-info p:nth-child(2n) {
+    padding-left: 20px;
+  }

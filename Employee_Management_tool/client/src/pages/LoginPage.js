@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -15,10 +16,22 @@ const LoginPage = () => {
       console.log("Submitting login form");
       const response = await axios.post('http://localhost:4000/login', { email, password });
       console.log("Login successful");
-      const token = response.data.token;
+      const {token} = response.data;
+      const {role} = response.data;
       localStorage.setItem('token', token);
       console.log("Navigating to dashboard");
-      navigate('/dashboard');
+      if(role=="admin"){
+
+        navigate('/Admindashboard');
+      }
+      else if(role=="employee"){
+
+        navigate('/Employeedashboard');
+      }
+      else{
+
+        navigate('/Dashboard');
+      }
     } catch (error) {
       console.error("Login error:", error);
       if (error.response && error.response.data) {
@@ -30,7 +43,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
+    <div className="login-form">
       <form onSubmit={handleSubmit}>
         <label>Email:</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -39,8 +52,8 @@ const LoginPage = () => {
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <br />
         <button type="submit">Login</button>
+        {error && <div className="error-message">{error}</div>}
       </form>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
     </div>
   );
 };
