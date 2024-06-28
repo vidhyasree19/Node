@@ -19,7 +19,6 @@ const ViewTeamDetails = () => {
       <h2>Team Details</h2>
       <p>Team Name: {team.name}</p>
       <p>Team Lead: {team.lead}</p>
-      {/* <p>Team Members: {team.members.join(', ')}</p> */}
     </div>
   );
 };

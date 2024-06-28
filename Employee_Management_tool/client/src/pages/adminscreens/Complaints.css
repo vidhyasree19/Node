@@ -1,44 +1,77 @@
 .AdminComplaintsPage {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.AdminComplaintsPage h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.AdminComplaintsPage input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.AdminComplaintsPage table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.AdminComplaintsPage th,.AdminComplaintsPage td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.AdminComplaintsPage th {
+  background-color: #f0f0f0;
+}
+
+.AdminComplaintsPage tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
+@media screen and (max-width: 992px) {
+ .AdminComplaintsPage {
+    padding: 15px;
   }
-  
-  .AdminComplaintsPage h2 {
-    margin-top: 0;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  li:last-child {
-    border-bottom: none;
-  }
-  
-  h3 {
-    margin-top: 0;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  p {
-    margin-bottom: 10px;
-  }
-  
-  .RaisedBy {
+ .AdminComplaintsPage table {
     font-size: 14px;
-    color: #666;
   }
+}
+
+@media screen and (max-width: 768px) {
+ .AdminComplaintsPage {
+    padding: 10px;
+  }
+ .AdminComplaintsPage table {
+    font-size: 12px;
+  }
+ .AdminComplaintsPage th,.AdminComplaintsPage td {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+ .AdminComplaintsPage {
+    padding: 5px;
+  }
+ .AdminComplaintsPage table {
+    font-size: 10px;
+  }
+ .AdminComplaintsPage th,.AdminComplaintsPage td {
+    padding: 2px;
+  }
+}

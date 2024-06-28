@@ -1,47 +1,80 @@
-
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .AdminDashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.AdminDashboard h1 {
+  margin-bottom: 20px;
+}
+
+.AdminDashboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.AdminDashboard ul li {
+  margin: 10px 0;
+}
+
+.AdminDashboard ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.AdminDashboard ul li a:hover {
+  background-color: #f0f8ff;
+  color: #0056b3;
+}
+@media (max-width: 768px) {
+  .AdminDashboard {
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
   }
-  
+
   .AdminDashboard h1 {
-    margin-top: 0;
-    font-weight: bold;
-    color: #333;
+    font-size: 22px;
   }
-  
-  .AdminDashboard ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+  .AdminDashboard ul li a {
+    font-size: 14px;
   }
-  
-  .AdminDashboard li {
-    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .AdminDashboard {
+    padding: 15px;
+    width: 90%;
   }
-  
-  .AdminDashboard a {
-    text-decoration: none;
-    color: #337ab7;
+
+  .AdminDashboard h1 {
+    font-size: 20px;
   }
-  
-  .AdminDashboard a:hover {
-    color: #23527c;
+
+  .AdminDashboard ul li a {
+    font-size: 12px;
+    padding: 8px;
   }
-  
-  .AdminDashboard li:before {
-    content: "\25B6"; 
-    margin-right: 10px;
-    color: #337ab7;
-  }
-  
-  .AdminDashboard li:hover:before {
-    color: #23527c;
-  }
+}
+

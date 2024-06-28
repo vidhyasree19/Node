@@ -60,9 +60,7 @@ const AdminDashboard = () => {
         <li>
           <Link to="/complaints">Complaints</Link>
         </li>
-        <li>
-          <Link to="/performances">Performances </Link>
-        </li>
+        
       </ul>
     </div>
   );

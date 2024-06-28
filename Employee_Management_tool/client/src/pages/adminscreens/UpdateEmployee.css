@@ -1,56 +1,74 @@
+body{
+  height: 190vh;
+}
 .UpdateEmployee {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .UpdateEmployee h2 {
-    margin-top: 0;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .UpdateEmployee form {
-    margin-bottom: 20px;
-  }
-  
-  .UpdateEmployee label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .UpdateEmployee input[type="text"],
-  .UpdateEmployee input[type="email"],
-  .UpdateEmployee input[type="number"] {
-    width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-height: 190vh;
+}
+
+.UpdateEmployee h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+@media screen and (max-width: 600px) {
+  .UpdateEmployee {
+    max-width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
   }
-  
-  .UpdateEmployee button {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+  input[type="text"], input[type="email"], input[type="number"] {
+    padding: 5px;
+    font-size: 14px;
   }
-  
-  .UpdateEmployee button:hover {
-    background-color: #3e8e41;
+
+  button[type="submit"] {
+    padding: 5px 10px;
+    font-size: 14px;
   }
-  
-  .UpdateEmployee .allocate-project,
-  .UpdateEmployee .update-performance-score {
-    margin-top: 20px;
-  }
-  
-  .UpdateEmployee .allocate-project label,
-  .UpdateEmployee .update-performance-score label {
-    display: inline-block;
-    margin-right: 10px;
-  }
+}

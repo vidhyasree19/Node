@@ -1,78 +1,100 @@
-
-
 .ViewComplaints {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ViewComplaints h2 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.ViewComplaints form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ViewComplaints input[type="search"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ViewComplaints button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ViewComplaints button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.ViewComplaints table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ViewComplaints th, .ViewComplaints td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.ViewComplaints th {
+  background-color: #f0f0f0;
+}
+
+
+@media (max-width: 768px) {
+  .ViewComplaints {
+    width: 90%;
+    padding: 15px;
   }
-  
-  .ViewComplaints h2 {
-    margin-top: 0;
-    font-weight: bold;
-    font-size: 18px;
-    color: #333;
+  .ViewComplaints form {
+    flex-direction: row;
+    align-items: center;
   }
-  
-  .ViewComplaints ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .ViewComplaints input[type="search"] {
+    width: 70%;
   }
-  
-  .ViewComplaints li {
-    margin-bottom: 20px;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
+  .ViewComplaints button[type="submit"] {
+    width: 30%;
   }
-  
-  .ViewComplaints li:last-child {
-    border-bottom: none;
+  .ViewComplaints table {
+    font-size: 14px;
   }
-  
-  .ViewComplaints h3 {
-    margin-top: 0;
-    font-weight: bold;
-    font-size: 16px;
-    color: #337ab7;
+}
+
+@media (max-width: 480px) {
+  .ViewComplaints {
+    width: 95%;
+    padding: 10px;
   }
-  
-  .ViewComplaints p {
-    margin-bottom: 10px;
+  .ViewComplaints form {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .ViewComplaints p.status {
-    font-weight: bold;
-    color: #337ab7;
+  .ViewComplaints input[type="search"] {
+    width: 100%;
   }
-  
-  .ViewComplaints .loading {
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #337ab7;
+  .ViewComplaints button[type="submit"] {
+    width: 100%;
   }
-  
-  .ViewComplaints .loading::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #337ab7;
-    border-top: 2px solid #fff;
-    animation: spin 1s linear infinite;
+  .ViewComplaints table {
+    font-size: 12px;
   }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+}

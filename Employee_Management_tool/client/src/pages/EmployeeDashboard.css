@@ -1,57 +1,80 @@
-
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .EmployeeDashboard {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .EmployeeDashboard h1 {
-    margin-top: 0;
-    font-weight: bold;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .EmployeeDashboard nav {
-    margin-bottom: 20px;
-  }
-  
-  .EmployeeDashboard ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .EmployeeDashboard li {
-    margin-right: 20px;
-  }
-  
-  .EmployeeDashboard a {
-    text-decoration: none;
-    color: #337ab7;
-  }
-  
-  .EmployeeDashboard a:hover {
-    color: #23527c;
-  }
-  
-  .EmployeeDashboard a.active {
-    font-weight: bold;
-    color: #23527c;
-  }
-  
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
 
-  .EmployeeDashboard.routes {
+.EmployeeDashboard h1 {
+  margin-bottom: 20px;
+}
+
+.EmployeeDashboard nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.EmployeeDashboard nav ul li {
+  margin: 10px 0;
+}
+
+.EmployeeDashboard nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.EmployeeDashboard nav ul li a:hover {
+  background-color: #f0f8ff;
+  color: #0056b3;
+}
+@media (max-width: 768px) {
+  .EmployeeDashboard {
     padding: 20px;
+    width: 80%;
   }
-  
-  .EmployeeDashboard.routes > * {
-    margin-bottom: 20px;
+
+  .EmployeeDashboard h1 {
+    font-size: 22px;
   }
+
+  .EmployeeDashboard nav ul li a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .EmployeeDashboard {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .EmployeeDashboard h1 {
+    font-size: 20px;
+  }
+
+  .EmployeeDashboard nav ul li a {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+

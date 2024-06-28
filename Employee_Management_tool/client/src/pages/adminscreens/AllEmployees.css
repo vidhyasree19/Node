@@ -1,59 +1,75 @@
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-height: 70vh;
+  
+}
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.employee-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.employee-card h2 {
+  margin-top: 0;
+}
+
+.employee-card p {
+  margin-bottom: 10px;
+}
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.AllEmployees input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+ .employee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+ .employee-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 
-.AllEmployees {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@media screen and (max-width: 992px) {
+ .employee-card {
+    padding: 15px;
   }
-  
-  .AllEmployees h1 {
-    margin-top: 0;
-    font-weight: bold;
-    font-size: 24px;
-    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+ .employee-card {
+    padding: 10px;
   }
-  
-  .AllEmployees ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .AllEmployees li {
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .AllEmployees li:last-child {
-    border-bottom: none;
-  }
-  
-  .AllEmployees li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .AllEmployees p {
-    margin-bottom: 10px;
-  }
-  
-  .AllEmployees span {
-    font-weight: bold;
-    color: #337ab7;
-  }
-  
-  .AllEmployees .error {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .loading {
-    font-weight: bold;
-    font-size: 24px;
-    color: #337ab7;
-    margin-bottom: 20px;
-  }
+}
+
+.employee-card h2 {
+  margin-top: 0;
+}
+
+.employee-card p {
+  margin-bottom: 10px;
+}

@@ -49,9 +49,9 @@ const LoginPage = () => {
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <br />
         <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input id ="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <br />
-        <button type="submit">Login</button>
+        <button className='login_button' type="submit">Login</button>
         {error && <div className="error-message">{error}</div>}
       </form>
     </div>
